@@ -1,0 +1,4 @@
+# ansible-playbook -i hosts main.yml
+
+- import_playbook: apps-server.yml
+- import_playbook: db-server.yml

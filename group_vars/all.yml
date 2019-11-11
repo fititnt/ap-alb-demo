@@ -4,12 +4,14 @@ alb_dmz:
   - ip: 167.86.127.220
     name: apps_server_apalbdemo
   - ip: 167.86.127.225
-    name: db_serverr_apalbdemo
+    name: db_server_apalbdemo
 
 alb_bastion_hosts:
   - ip: 177.126.157.169
     name: aguia-pescadora-delta.etica.ai
 
-#alb_jump_boxes:
-#  - ip: 177.126.157.169
-#    name: aguia-pescadora-delta.etica.ai
+alb_jump_boxes:
+  - ip: 192.0.2.10
+    name: TEST-NET-1 (example IP)
+
+# alb_manange_all: no

@@ -1,1 +1,5 @@
 ---
+
+alb_manange_haproxy: no
+alb_manange_openresty: no
+alb_manange_ufw: yes
