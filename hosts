@@ -1,0 +1,13 @@
+[apps_servers]
+apps_server_apalbdemo ansible_host="167.86.127.220"
+# Using aguia-pescadora-echo.etica.ai
+
+[db_servers]
+db_serverr_apalbdemo ansible_host="167.86.127.225"
+# Using aguia-pescadora-foxtrot.etica.ai
+
+[all:vars]
+
+[apps_servers:vars]
+
+[db_servers:vars]
