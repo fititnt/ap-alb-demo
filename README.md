@@ -28,6 +28,13 @@ vim hosts
 ansible-playbook -i hosts main.yml
 ```
 
+### Variables used by apps-server and db-server
+
+### Variables read only by apps_servers
+### Variables read only by db_servers
+- apps-server
+  
+
 ## License
 [![Public Domain](https://i.creativecommons.org/p/zero/1.0/88x31.png)](UNLICENSE)
 

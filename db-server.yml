@@ -5,4 +5,39 @@
 - name: "db_servers"
   hosts: db_servers
   remote_user: root
+  vars:
+    # the variables from the following archives will be loaded by ansible
+    # groups_vars/all.yml
+    # groups_vars/db_servers.yml
+
   roles:
+    - ap-application-load-balancer
+  tasks:
+
+    # ap-alb-demo is a simple demo, so these tasks to install MariaDB are a bit
+    # simpler, but works for a demo
+
+    - name: sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+      apt_key:
+        keyserver: "{{ mariadb_apt_key_keyserver }}"
+        id: "{{ mariadb_apt_key_id }}"
+
+    - name: sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main'
+      apt_repository:
+        repo: "{{ mariadb_apt_repository }}"
+        state: present
+        update_cache: yes
+
+    - name: sudo apt install mariadb-server mariadb-client
+      apt:
+        name: "{{ packages }}"
+      vars:
+        packages:
+        - mariadb-server
+        - mariadb-client
+
+    - name: sudo systemctl enable haproxy.service
+      systemd:
+        name: haproxy
+        state: started
+        enabled: yes

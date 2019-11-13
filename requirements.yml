@@ -9,5 +9,5 @@
 
 - src: https://github.com/fititnt/ap-application-load-balancer
   name: ap-application-load-balancer
-  version: master
-  # version: "v0.6.2-alpha"
+  # version: master
+  version: "v0.6.3-beta"

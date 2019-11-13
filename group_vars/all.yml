@@ -1,4 +1,5 @@
 ---
+alb_ufw_reset: yes
 
 alb_dmz:
   - ip: 167.86.127.220

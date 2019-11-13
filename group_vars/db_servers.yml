@@ -6,13 +6,6 @@ alb_manange_ufw: yes
 
 alb_ufw_rules:
   - rule: allow
-    port: 80
+    port: 3306
     proto: tcp
-    comment: "alb_ufw_rules__default"
-  - rule: allow
-    port: 443
-    proto: tcp
-    comment: "alb_ufw_rules__default"
-  - rule: allow
-    port: 1234
-    comment: "teste 1234"
+    comment: "MySQL port open for everyone"
