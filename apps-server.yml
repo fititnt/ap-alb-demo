@@ -5,6 +5,12 @@
 - name: "apps_servers"
   hosts: apps_servers
   remote_user: root
+  vars:
+#    alb_apps:
+#    - app_uid: "static-home-page"
+#      app_domain: "www.example.org"
+#      app_root: "/var/www/html"
+#      app_forcehttps: no
+#      app_alb_strategy: "files-local"
   roles:
-    - common
     - ap-application-load-balancer

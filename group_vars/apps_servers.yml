@@ -3,3 +3,13 @@
 alb_manange_haproxy: yes
 alb_manange_openresty: yes
 alb_manange_ufw: yes
+
+alb_ufw_rules:
+  - rule: allow
+    port: 802
+    proto: tcp
+    comment: "alb_ufw_rules__default"
+  - rule: allow
+    port: 4432
+    proto: tcp
+    comment: "alb_ufw_rules__default"
