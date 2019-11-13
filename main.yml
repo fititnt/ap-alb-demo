@@ -1,3 +1,7 @@
+---
+# FILE:            main.yml
+# LICENSE:         Public Domain
+
 # ansible-playbook -i hosts main.yml
 
 - import_playbook: apps-server.yml

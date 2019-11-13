@@ -1,4 +1,6 @@
 ---
+# FILE:            group_vars/db_servers.yml
+# LICENSE:         Public Domain
 
 alb_manange_haproxy: no
 alb_manange_openresty: no

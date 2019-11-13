@@ -1,4 +1,7 @@
 ---
+# FILE:            group_vars/apps_servers.yml
+# LICENSE:         Public Domain
+
 alb_manange_haproxy: yes
 alb_manange_openresty: yes
 alb_manange_ufw: yes

@@ -1,4 +1,9 @@
 ---
+# FILE:            group_vars/all.yml
+# LICENSE:         Public Domain
+
+ansible_python_interpreter: /usr/bin/python3
+
 alb_ufw_reset: yes
 
 alb_dmz:

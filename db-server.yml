@@ -1,4 +1,6 @@
 ---
+# FILE:            db-server.yml
+# LICENSE:         Public Domain
 
 # ansible-playbook -i hosts db-server.yml
 
