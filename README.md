@@ -7,18 +7,20 @@ See <https://github.com/fititnt/ap-application-load-balancer>
 <!--
 Demo:
 
-    asciinema rec ap-alb-demo-003 --idle-time-limit 5 --title "ap-alb-demo (AP-ALB v0.6.3-beta)"
+    asciinema rec ap-alb-demo-004 --idle-time-limit 5 --title "ap-alb-demo (AP-ALB v0.6.4-beta)"
 
     cat hosts && sleep 4 && cat main.yml && sleep 4 && cat apps-server.yml && sleep 4 && cat db-server.yml && sleep 4 && cat group_vars/all.yml && sleep 6 && cat group_vars/apps_servers.yml && sleep 6 && cat group_vars/apps_servers.yml
 
     ansible-playbook -i hosts main.yml
 
 
+Em caso de falha:
+    ansible-playbook -i hosts main.yml --start-at-task="ALB/UFW clusterfuck-pre-check.yml"
+    ansible-playbook -i hosts main.yml --start-at-task="Configure the kernel to keep connections alive when enabling the firewall"
+
 -->
 
-> _Note: this run of ASCIInema demo still bugged. Later will be solved_
-
-[![asciicast](https://asciinema.org/a/GPIb1Mhb4piTuByKBPVg6MahK.svg)](https://asciinema.org/a/GPIb1Mhb4piTuByKBPVg6MahK)
+[![asciicast](https://asciinema.org/a/281411.svg)](https://asciinema.org/a/281411)
 
 ## How to download this ap-alb-demo to your machine
 

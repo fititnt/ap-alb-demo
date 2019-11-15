@@ -4,6 +4,7 @@
 
 ansible_python_interpreter: /usr/bin/python3
 
+alb_manange_common: yes
 alb_ufw_reset: yes
 
 alb_dmz:

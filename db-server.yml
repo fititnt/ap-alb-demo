@@ -12,6 +12,11 @@
     # groups_vars/all.yml
     # groups_vars/db_servers.yml
 
+    ## From https://downloads.mariadb.org/mariadb/repositories/
+    mariadb_apt_repository: 'deb [arch=amd64,arm64,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.4/ubuntu bionic main'
+    mariadb_apt_key_keyserver: 'hkp://keyserver.ubuntu.com:80'
+    mariadb_apt_key_id: '0xF1656F24C74CD1D8'
+
   roles:
     - ap-application-load-balancer
   tasks:
@@ -37,9 +42,3 @@
         packages:
         - mariadb-server
         - mariadb-client
-
-    - name: sudo systemctl enable haproxy.service
-      systemd:
-        name: haproxy
-        state: started
-        enabled: yes
